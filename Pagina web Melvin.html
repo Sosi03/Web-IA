@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Multiservicios García - Gestión de trámites administrativos, tributarios, vehiculares, académicos y gubernamentales en Guatemala. Servicios presenciales y en línea con atención profesional.">
+    <meta name="keywords" content="Trámites SAT Guatemala, Apertura de NIT, Agencia Virtual SAT, Actualización RTU, FEL Guatemala, Pago de circulación, Cambio de placas Guatemala, Certificados RENAP, Antecedentes penales Guatemala, Servicios administrativos Guatemala, Gestiones en línea Guatemala, Multiservicios García">
+    <meta name="author" content="Multiservicios García">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Multiservicios García | Trámites Rápidos y Seguros en Guatemala">
+    <meta property="og:description" content="Realizamos tus trámites de forma rápida, segura y profesional. Gestión tributaria, vehicular, universitaria, legal y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_GT">
+    <title>Multiservicios García | Trámites Administrativos y Tributarios en Guatemala</title>
+
+    <!-- Font Awesome CDN para iconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul-oscuro: #0a1f3f;
+            --azul-medio: #0d2b54;
+            --turquesa: #0ea5a0;
+            --turquesa-claro: #14b8b0;
+            --verde-suave: #a3d9b1;
+            --verde-acento: #5cb87a;
+            --blanco: #ffffff;
+            --gris-claro: #f5f7fa;
+            --gris-medio: #e8ecf1;
+            --texto-oscuro: #1a1f2e;
+            --texto-medio: #4a5568;
+            --texto-claro: #718096;
+            --sombra-suave: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --sombra-media: 0 8px 35px rgba(0, 0, 0, 0.10);
+            --sombra-turquesa: 0 8px 30px rgba(14, 165, 160, 0.25);
+            --borde-radius: 16px;
+            --borde-radius-sm: 10px;
+            --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--blanco);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========== HEADER / HERO ========== */
+        .hero {
+            background: linear-gradient(160deg, var(--azul-oscuro) 0%, #0c2447 30%, #0e3058 60%, #0a1a35 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1.5rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -180px;
+            right: -180px;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(circle, rgba(14, 165, 160, 0.13) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -120px;
+            left: -120px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(163, 217, 177, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: repeating-linear-gradient(45deg,
+                    transparent,
+                    transparent 30px,
+                    rgba(255, 255, 255, 0.5) 30px,
+                    rgba(255, 255, 255, 0.5) 31px),
+                repeating-linear-gradient(-45deg,
+                    transparent,
+                    transparent 30px,
+                    rgba(255, 255, 255, 0.5) 30px,
+                    rgba(255, 255, 255, 0.5) 31px);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+            flex-wrap: wrap;
+        }
+
+        .hero-texto {
+            flex: 1 1 500px;
+            color: var(--blanco);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(14, 165, 160, 0.2);
+            border: 1px solid rgba(14, 165, 160, 0.4);
+            color: var(--turquesa-claro);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-badge i {
+            margin-right: 0.4rem;
+        }
+
+        .hero-texto h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+        }
+
+        .hero-texto h1 span {
+            background: linear-gradient(135deg, var(--turquesa-claro) 0%, #5ce0d8 50%, var(--verde-acento) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitulo {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #c5d1e0;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-mensaje {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #dce4f0;
+            margin-bottom: 2.5rem;
+            max-width: 550px;
+            line-height: 1.7;
+        }
+
+        .hero-botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transicion);
+            border: none;
+            font-family: inherit;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        .btn-turquesa {
+            background: var(--turquesa);
+            color: #fff;
+            box-shadow: var(--sombra-turquesa);
+        }
+        .btn-turquesa:hover {
+            background: #0d9488;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 38px rgba(14, 165, 160, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.35);
+        }
+        .btn-whatsapp:hover {
+            background: #1fbb58;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45);
+        }
+
+        .btn-blanco {
+            background: #fff;
+            color: var(--azul-oscuro);
+            font-weight: 700;
+            box-shadow: var(--sombra-suave);
+        }
+        .btn-blanco:hover {
+            background: #f0f4f8;
+            transform: translateY(-3px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .hero-ilustracion {
+            flex: 1 1 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .hero-card .icono-grande {
+            font-size: 4rem;
+            color: var(--turquesa-claro);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .hero-card p {
+            color: #c5d1e0;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-card .mini-stats {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .hero-card .stat {
+            text-align: center;
+        }
+        .hero-card .stat strong {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--turquesa-claro);
+        }
+        .hero-card .stat span {
+            font-size: 0.8rem;
+            color: #a0b0c5;
+        }
+
+        /* ========== NAVEGACIÓN STICKY ========== */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 31, 63, 0.92);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 0.8rem 1.5rem;
+            transition: var(--transicion);
+        }
+        .navbar-inner {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        .nav-logo i {
+            color: var(--turquesa-claro);
+            margin-right: 0.4rem;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #c5d1e0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: var(--transicion);
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--turquesa);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ========== SECCIONES GENERALES ========== */
+        .seccion {
+            padding: 5rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .seccion-titulo {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .seccion-titulo h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--azul-oscuro);
+            letter-spacing: -0.02em;
+            margin-bottom: 0.8rem;
+        }
+        .seccion-titulo .linea {
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--turquesa);
+            border-radius: 4px;
+            margin: 0 auto 1rem;
+        }
+        .seccion-titulo p {
+            color: var(--texto-medio);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .bg-gris {
+            background: var(--gris-claro);
+            border-radius: var(--borde-radius);
+            padding: 4rem 1.5rem;
+            margin: 2rem auto;
+            max-width: 1300px;
+        }
+
+        /* ========== TARJETAS ========== */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tarjeta {
+            background: #fff;
+            border-radius: var(--borde-radius);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicion);
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        .tarjeta:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--sombra-media);
+            border-color: #e0e8f0;
+        }
+        .tarjeta .icono {
+            font-size: 2.6rem;
+            color: var(--turquesa);
+            margin-bottom: 1.2rem;
+            display: block;
+        }
+        .tarjeta h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--azul-oscuro);
+            font-size: 1.15rem;
+        }
+        .tarjeta p,
+        .tarjeta ul {
+            color: var(--texto-medio);
+            font-size: 0.95rem;
+            text-align: left;
+        }
+        .tarjeta ul {
+            list-style: none;
+            padding: 0;
+        }
+        .tarjeta ul li {
+            padding: 0.35rem 0;
+            border-bottom: 1px solid #f0f2f5;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tarjeta ul li i {
+            color: var(--turquesa);
+            font-size: 0.9rem;
+            width: 20px;
+            text-align: center;
+        }
+        .tarjeta ul li:last-child {
+            border-bottom: none;
+        }
+
+        .tarjeta-servicio {
+            text-align: left;
+            border-left: 4px solid var(--turquesa);
+            border-radius: 0 var(--borde-radius-sm) var(--borde-radius-sm) 0;
+        }
+
+        /* ========== PASOS ========== */
+        .pasos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            counter-reset: paso;
+        }
+        .paso {
+            flex: 1 1 200px;
+            max-width: 260px;
+            text-align: center;
+            position: relative;
+            background: #fff;
+            border-radius: var(--borde-radius);
+            padding: 2rem 1.2rem;
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicion);
+        }
+        .paso:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--sombra-media);
+        }
+        .paso .numero {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: var(--turquesa);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--sombra-turquesa);
+        }
+        .paso h4 {
+            font-weight: 700;
+            color: var(--azul-oscuro);
+            margin-bottom: 0.4rem;
+        }
+        .paso p {
+            color: var(--texto-medio);
+            font-size: 0.9rem;
+        }
+
+        /* ========== TESTIMONIOS ========== */
+        .testimonio {
+            background: #fff;
+            border-radius: var(--borde-radius);
+            padding: 2rem;
+            box-shadow: var(--sombra-suave);
+            text-align: center;
+            transition: var(--transicion);
+            border-top: 4px solid var(--turquesa);
+        }
+        .testimonio:hover {
+            box-shadow: var(--sombra-media);
+            transform: translateY(-3px);
+        }
+        .testimonio .estrellas {
+            color: #f6b100;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .testimonio p {
+            font-style: italic;
+            color: var(--texto-medio);
+            margin-bottom: 1rem;
+        }
+        .testimonio strong {
+            color: var(--azul-oscuro);
+            display: block;
+        }
+
+        /* ========== FAQ ========== */
+        .faq-item {
+            background: #fff;
+            border-radius: var(--borde-radius-sm);
+            margin-bottom: 1rem;
+            box-shadow: var(--sombra-suave);
+            overflow: hidden;
+            border: 1px solid #eef1f5;
+        }
+        .faq-pregunta {
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--azul-oscuro);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transicion);
+            user-select: none;
+        }
+        .faq-pregunta:hover {
+            background: #f9fafb;
+        }
+        .faq-pregunta i {
+            transition: transform 0.3s;
+            color: var(--turquesa);
+        }
+        .faq-respuesta {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            background: #fafcfd;
+            color: var(--texto-medio);
+            font-size: 0.95rem;
+            padding: 0 1.5rem;
+        }
+        .faq-item.activo .faq-respuesta {
+            max-height: 200px;
+            padding: 1rem 1.5rem;
+        }
+        .faq-item.activo .faq-pregunta i {
+            transform: rotate(180deg);
+        }
+
+        /* ========== CONTACTO ========== */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .info-contacto {
+            background: var(--azul-oscuro);
+            color: #fff;
+            border-radius: var(--borde-radius);
+            padding: 2.5rem;
+        }
+        .info-contacto h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+        }
+        .info-contacto .dato {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .info-contacto .dato i {
+            color: var(--turquesa-claro);
+            width: 24px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .info-contacto .dato a {
+            color: #dce4f0;
+            text-decoration: none;
+        }
+        .formulario input,
+        .formulario textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transicion);
+            margin-bottom: 1rem;
+            background: #fff;
+        }
+        .formulario textarea {
+            border-radius: var(--borde-radius-sm);
+            resize: vertical;
+            min-height: 110px;
+        }
+        .formulario input:focus,
+        .formulario textarea:focus {
+            outline: none;
+            border-color: var(--turquesa);
+            box-shadow: 0 0 0 4px rgba(14, 165, 160, 0.1);
+        }
+
+        /* ========== WHATSAPP FLOTANTE ========== */
+        .whatsapp-flotante {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            background: #25D366;
+            color: #fff;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: var(--transicion);
+            animation: pulse-wa 2.2s infinite;
+        }
+        .whatsapp-flotante:hover {
+            transform: scale(1.1);
+            box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55);
+            animation: none;
+        }
+        @keyframes pulse-wa {
+            0%,
+            100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 8px 45px rgba(37, 211, 102, 0.7);
+                transform: scale(1.04);
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--azul-oscuro);
+            color: #c5d1e0;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: var(--turquesa-claro);
+            text-decoration: none;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 900px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-texto {
+                text-align: center;
+            }
+            .hero-mensaje {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-botones {
+                justify-content: center;
+            }
+            .hero-card {
+                max-width: 350px;
+                margin-top: 1rem;
+            }
+            .nav-links {
+                gap: 0.8rem;
+                font-size: 0.85rem;
+            }
+            .seccion {
+                padding: 3rem 1rem;
+            }
+            .bg-gris {
+                padding: 2.5rem 1rem;
+                border-radius: var(--borde-radius-sm);
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-texto h1 {
+                font-size: 2rem;
+            }
+            .btn {
+                padding: 0.75rem 1.3rem;
+                font-size: 0.9rem;
+            }
+            .whatsapp-flotante {
+                width: 52px;
+                height: 52px;
+                font-size: 1.5rem;
+                bottom: 18px;
+                right: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="inicio">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-texto">
+                <span class="hero-badge"><i class="fas fa-shield-alt"></i> Empresa guatemalteca confiable</span>
+                <h1>MULTISERVICIOS <span>GARCÍA</span></h1>
+                <p class="hero-subtitulo">Servicios en sistemas avanzados online</p>
+                <p class="hero-mensaje">
+                    "Realizamos tus trámites de forma rápida, segura y profesional, ahorrándote tiempo y complicaciones."
+                </p>
+                <div class="hero-botones">
+                    <a href="#contacto" class="btn btn-turquesa"><i class="fas fa-paper-plane"></i> Solicitar información</a>
+                    <a href="https://wa.me/50258793376?text=Hola%2C+quisiera+informaci%C3%B3n+sobre+sus+servicios" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Contactar por WhatsApp</a>
+                    <a href="#servicios" class="btn btn-outline"><i class="fas fa-list-check"></i> Ver servicios</a>
+                </div>
+            </div>
+            <div class="hero-ilustracion">
+                <div class="hero-card">
+                    <i class="fa-solid fa-file-shield icono-grande"></i>
+                    <h3>Gestión Profesional</h3>
+                    <p>Trámites presenciales y en línea con seguimiento personalizado.</p>
+                    <div class="mini-stats">
+                        <div class="stat"><strong>+500</strong><span>Clientes</span></div>
+                        <div class="stat"><strong>+1,200</strong><span>Trámites</span></div>
+                        <div class="stat"><strong>24/7</strong><span>Atención</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NAVEGACIÓN STICKY ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#inicio" class="nav-logo"><i class="fas fa-building-columns"></i> MULTISERVICIOS GARCÍA</a>
+            <ul class="nav-links">
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#elegirnos">Ventajas</a></li>
+                <li><a href="#como-trabajamos">Proceso</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== ¿QUIÉNES SOMOS? ==================== -->
+    <section class="seccion" id="quienes-somos">
+        <div class="seccion-titulo">
+            <h2>¿Quiénes Somos?</h2>
+            <span class="linea"></span>
+            <p>Conozca la empresa detrás de sus gestiones exitosas.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; max-width: 1100px; margin: 0 auto;">
+            <div style="flex: 1 1 300px; text-align: center;">
+                <i class="fas fa-handshake" style="font-size: 6rem; color: var(--turquesa); opacity: 0.8;"></i>
+            </div>
+            <div style="flex: 2 1 400px;">
+                <p style="font-size: 1.15rem; color: var(--texto-medio); line-height: 1.8; margin-bottom: 1rem;">
+                    <strong>Multiservicios García</strong> es una empresa especializada en asesoría y gestión de trámites administrativos, tributarios, vehiculares y académicos en Guatemala.
+                </p>
+                <p style="color: var(--texto-medio); line-height: 1.8;">
+                    Brindamos atención personalizada, seguimiento profesional y soluciones eficientes para personas y empresas que buscan realizar sus gestiones de manera rápida y segura. Nuestro compromiso es simplificar la burocracia para que usted pueda enfocarse en lo que realmente importa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICIOS ==================== -->
+    <section class="bg-gris" id="servicios">
+        <div class="seccion-titulo">
+            <h2>Nuestros Servicios</h2>
+            <span class="linea"></span>
+            <p>Gestiones profesionales para cada necesidad.</p>
+        </div>
+        <div class="grid-3" style="max-width: 1200px; margin: 0 auto;">
+
+            <!-- Tributarios -->
+            <div class="tarjeta tarjeta-servicio">
+                <i class="fas fa-file-invoice-dollar icono" style="color: #0ea5a0;"></i>
+                <h3>Servicios Tributarios</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Solicitud de primer NIT</li>
+                    <li><i class="fas fa-check-circle"></i> Apertura de Agencia Virtual</li>
+                    <li><i class="fas fa-check-circle"></i> Inscripción de pequeños contribuyentes</li>
+                    <li><i class="fas fa-check-circle"></i> Actualización de RTU</li>
+                    <li><i class="fas fa-check-circle"></i> Factura Electrónica FEL</li>
+                    <li><i class="fas fa-check-circle"></i> Libro Electrónico Tributario LET</li>
+                    <li><i class="fas fa-check-circle"></i> Solvencia Fiscal</li>
+                    <li><i class="fas fa-check-circle"></i> Pago de Omisos</li>
+                    <li><i class="fas fa-check-circle"></i> Patentes de Comercio</li>
+                </ul>
+            </div>
+
+            <!-- Vehiculares -->
+            <div class="tarjeta tarjeta-servicio">
+                <i class="fas fa-car-side icono" style="color: #0ea5a0;"></i>
+                <h3>Servicios Vehiculares</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Pago de circulación</li>
+                    <li><i class="fas fa-check-circle"></i> Impresión de calcomanías</li>
+                    <li><i class="fas fa-check-circle"></i> Cambio de placas vinílicas a metálicas</li>
+                    <li><i class="fas fa-check-circle"></i> Reposición de título de vehículo</li>
+                    <li><i class="fas fa-check-circle"></i> Reposición de circulación</li>
+                </ul>
+            </div>
+
+            <!-- Universitarios -->
+            <div class="tarjeta tarjeta-servicio">
+                <i class="fas fa-graduation-cap icono" style="color: #0ea5a0;"></i>
+                <h3>Servicios Universitarios</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Sello en línea para títulos universitarios</li>
+                    <li><i class="fas fa-check-circle"></i> Pago de matrículas universitarias</li>
+                    <li><i class="fas fa-check-circle"></i> Gestión de trámites académicos</li>
+                </ul>
+            </div>
+
+            <!-- Legales -->
+            <div class="tarjeta tarjeta-servicio">
+                <i class="fas fa-scale-balanced icono" style="color: #0ea5a0;"></i>
+                <h3>Servicios Legales y Administrativos</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Antecedentes penales</li>
+                    <li><i class="fas fa-check-circle"></i> Antecedentes policiales</li>
+                    <li><i class="fas fa-check-circle"></i> Trámite RENAS</li>
+                    <li><i class="fas fa-check-circle"></i> Finiquito y RGAE</li>
+                    <li><i class="fas fa-check-circle"></i> Actualización de datos ante la Contraloría General de Cuentas</li>
+                </ul>
+            </div>
+
+            <!-- Registrales -->
+            <div class="tarjeta tarjeta-servicio">
+                <i class="fas fa-certificate icono" style="color: #0ea5a0;"></i>
+                <h3>Servicios Registrales</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Certificados de nacimiento RENAP</li>
+                    <li><i class="fas fa-check-circle"></i> Certificados de defunción RENAP</li>
+                    <li><i class="fas fa-check-circle"></i> Otras certificaciones y constancias</li>
+                </ul>
+            </div>
+
+            <!-- Otros -->
+            <div class="tarjeta tarjeta-servicio">
+                <i class="fas fa-laptop-file icono" style="color: #0ea5a0;"></i>
+                <h3>Otros Servicios</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Asesoría personalizada</li>
+                    <li><i class="fas fa-check-circle"></i> Gestión de documentación</li>
+                    <li><i class="fas fa-check-circle"></i> Trámites digitales</li>
+                    <li><i class="fas fa-check-circle"></i> Servicios en línea</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ¿POR QUÉ ELEGIRNOS? ==================== -->
+    <section class="seccion" id="elegirnos">
+        <div class="seccion-titulo">
+            <h2>¿Por qué elegirnos?</h2>
+            <span class="linea"></span>
+            <p>Ventajas que marcan la diferencia.</p>
+        </div>
+        <div class="grid-3">
+            <div class="tarjeta">
+                <i class="fas fa-user-check icono"></i>
+                <h3>Atención personalizada</h3>
+                <p>Cada cliente recibe un trato único y dedicado según sus necesidades específicas.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-bolt icono"></i>
+                <h3>Respuesta rápida</h3>
+                <p>Respondemos en minutos y gestionamos con agilidad para que no pierda tiempo.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-lock icono"></i>
+                <h3>Trámites seguros</h3>
+                <p>Manejamos su documentación con estricta confidencialidad y protocolos seguros.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-award icono"></i>
+                <h3>Experiencia profesional</h3>
+                <p>Licenciado colegiado activo con amplia trayectoria en gestiones gubernamentales.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-magnifying-glass-chart icono"></i>
+                <h3>Seguimiento constante</h3>
+                <p>Le mantenemos informado en cada etapa del trámite hasta su conclusión exitosa.</p>
+            </div>
+            <div class="tarjeta">
+                <i class="fas fa-globe icono"></i>
+                <h3>Atención presencial y virtual</h3>
+                <p>Realizamos gestiones tanto en oficinas gubernamentales como a través de plataformas digitales.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CÓMO TRABAJAMOS ==================== -->
+    <section class="bg-gris" id="como-trabajamos">
+        <div class="seccion-titulo">
+            <h2>Cómo trabajamos</h2>
+            <span class="linea"></span>
+            <p>Un proceso simple y transparente en 4 pasos.</p>
+        </div>
+        <div class="pasos" style="max-width: 1100px; margin: 0 auto;">
+            <div class="paso">
+                <div class="numero">1</div>
+                <h4>Solicitud de información</h4>
+                <p>El cliente nos contacta y expone el trámite que necesita realizar.</p>
+            </div>
+            <div class="paso">
+                <div class="numero">2</div>
+                <h4>Revisión de requisitos</h4>
+                <p>Verificamos la documentación necesaria y orientamos al cliente.</p>
+            </div>
+            <div class="paso">
+                <div class="numero">3</div>
+                <h4>Gestión correspondiente</h4>
+                <p>Realizamos el trámite de forma presencial o en línea con profesionalismo.</p>
+            </div>
+            <div class="paso">
+                <div class="numero">4</div>
+                <h4>Entrega del resultado</h4>
+                <p>Entregamos el documento o comprobante finalizado al cliente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIOS ==================== -->
+    <section class="seccion" id="testimonios">
+        <div class="seccion-titulo">
+            <h2>Testimonios</h2>
+            <span class="linea"></span>
+            <p>Lo que dicen nuestros clientes satisfechos.</p>
+        </div>
+        <div class="grid-3" style="max-width: 1100px; margin: 0 auto;">
+            <div class="testimonio">
+                <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Excelente servicio, rapidísimos con mi NIT y la Agencia Virtual. En menos de 24 horas ya tenía todo listo. ¡Muy recomendados!"</p>
+                <strong>- María José P.</strong>
+            </div>
+            <div class="testimonio">
+                <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Profesionalismo total. Me ayudaron con el cambio de placas y la calcomanía sin moverme de casa. Atención impecable."</p>
+                <strong>- Carlos R.</strong>
+            </div>
+            <div class="testimonio">
+                <div class="estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Confianza absoluta. Gestionaron mis antecedentes penales y el trámite RENAS con total discreción y eficiencia."</p>
+                <strong>- Ana Lucía M.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="bg-gris" id="faq">
+        <div class="seccion-titulo">
+            <h2>Preguntas Frecuentes</h2>
+            <span class="linea"></span>
+            <p>Respuestas rápidas a sus dudas.</p>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item">
+                <div class="faq-pregunta" onclick="toggleFAQ(this)">
+                    ¿Qué documentos necesito?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">Depende del trámite. Al contactarnos, le indicaremos los requisitos específicos según su caso. Generalmente se requiere DPI, NIT y documentos relacionados al trámite solicitado.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta" onclick="toggleFAQ(this)">
+                    ¿Cuánto tarda cada trámite?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">La mayoría de trámites se completan entre 24 y 72 horas hábiles. Algunos procesos más complejos pueden tardar un poco más, pero siempre le informaremos el plazo estimado al inicio.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta" onclick="toggleFAQ(this)">
+                    ¿Puedo realizar el trámite de forma virtual?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">Sí, muchos de nuestros servicios se gestionan completamente en línea. Otros requieren presencia física, pero nosotros nos encargamos de todo el proceso por usted.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta" onclick="toggleFAQ(this)">
+                    ¿Cómo puedo pagar?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">Aceptamos transferencias bancarias, depósitos y pagos en efectivo. Los detalles se coordinan directamente al solicitar el servicio.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta" onclick="toggleFAQ(this)">
+                    ¿Atienden empresas y personas individuales?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-respuesta">¡Por supuesto! Brindamos servicios tanto a personas individuales como a empresas, emprendedores, comerciantes y profesionales independientes.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACTO ==================== -->
+    <section class="seccion" id="contacto">
+        <div class="seccion-titulo">
+            <h2>Contacto</h2>
+            <span class="linea"></span>
+            <p>Estamos listos para atenderle.</p>
+        </div>
+        <div class="contacto-grid" style="max-width: 1100px; margin: 0 auto;">
+            <div class="info-contacto">
+                <h3><i class="fas fa-address-card"></i> Lic. Melvin García</h3>
+                <div class="dato"><i class="fas fa-id-badge"></i> <span>Colegiado Activo: <strong>33111</strong></span></div>
+                <div class="dato"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/50258793376?text=Hola%2C+quisiera+informaci%C3%B3n+sobre+sus+servicios" target="_blank" rel="noopener">+502 5879 3376</a></div>
+                <div class="dato"><i class="fas fa-clock"></i> <span>Horarios: Lunes a Viernes 8:00 - 18:00 | Sábados 9:00 - 13:00</span></div>
+                <div class="dato"><i class="fas fa-map-marker-alt"></i> <span>Guatemala, Ciudad de Guatemala</span></div>
+                <div style="margin-top: 2rem;">
+                    <a href="https://wa.me/50258793376?text=Hola%2C+quisiera+informaci%C3%B3n+sobre+sus+servicios" target="_blank" rel="noopener" class="btn btn-whatsapp" style="display: inline-flex; width: auto;">
+                        <i class="fab fa-whatsapp"></i> Escríbanos por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="formulario">
+                <h3 style="margin-bottom: 1rem; color: var(--azul-oscuro);">Envíenos un mensaje</h3>
+                <form id="formContacto" onsubmit="event.preventDefault(); enviarFormulario();">
+                    <input type="text" placeholder="Nombre completo" required>
+                    <input type="tel" placeholder="Teléfono o WhatsApp" required>
+                    <input type="email" placeholder="Correo electrónico (opcional)">
+                    <textarea placeholder="Describa el trámite que necesita..." required></textarea>
+                    <button type="submit" class="btn btn-turquesa" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+        <!-- Mapa -->
+        <div style="max-width: 1100px; margin: 2.5rem auto 0; border-radius: var(--borde-radius); overflow: hidden; box-shadow: var(--sombra-media);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123522.302857999!2d-90.56778!3d14.634915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a180655c3345%3A0x4a72aadec1b2de5c!2sCiudad%20de%20Guatemala!5e0!3m2!1ses!2sgt!4v1717000000000"
+            width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación Multiservicios García"></iframe>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <p>&copy; <span id="year"></span> Multiservicios García. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.4rem;">Diseñado con profesionalismo para servirle mejor. | <a href="#inicio">Volver arriba</a></p>
+    </footer>
+
+    <!-- ==================== WHATSAPP FLOTANTE ==================== -->
+    <a href="https://wa.me/50258793376?text=Hola%2C+quisiera+informaci%C3%B3n+sobre+sus+servicios" target="_blank" rel="noopener" class="whatsapp-flotante" title="Contáctenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Año dinámico en footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // FAQ toggle
+        function toggleFAQ(elemento) {
+            const item = elemento.parentElement;
+            const estabaActivo = item.classList.contains('activo');
+            // Cerrar todos
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('activo'));
+            // Abrir si no estaba activo
+            if (!estabaActivo) {
+                item.classList.add('activo');
+            }
+        }
+
+        // Enviar formulario (simulación)
+        function enviarFormulario() {
+            const form = document.getElementById('formContacto');
+            const inputs = form.querySelectorAll('input, textarea');
+            let datos = {};
+            inputs.forEach(inp => {
+                datos[inp.placeholder || inp.type] = inp.value;
+            });
+            // Redirigir a WhatsApp con mensaje
+            const mensaje = encodeURIComponent(
+                `Hola, soy ${datos['Nombre completo'] || 'cliente'}. Me interesa: ${datos['Describa el trámite que necesita...'] || 'información sobre sus servicios'}. Mi teléfono: ${datos['Teléfono o WhatsApp'] || ''}`
+                );
+            window.open(`https://wa.me/50258793376?text=${mensaje}`, '_blank');
+            form.reset();
+            alert('¡Gracias! Será redirigido a WhatsApp para continuar la conversación.');
+        }
+
+        // Navbar sombra al scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.style.boxShadow = '0 6px 30px rgba(0,0,0,0.2)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
